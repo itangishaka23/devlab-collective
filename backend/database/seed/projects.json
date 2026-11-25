@@ -1,0 +1,260 @@
+[
+  {
+    "slug": "campusconnect",
+    "title": "CampusConnect Portal",
+    "tag": "Web App",
+    "icon": "bi-mortarboard-fill",
+    "blurb": "A unified student-services portal: timetables, announcements and room booking.",
+    "stack": [
+      "React",
+      "Node.js",
+      "PostgreSQL"
+    ],
+    "progress": 78,
+    "milestone": "Sprint 7 of 9",
+    "status": "Beta",
+    "art": "a1",
+    "sort_order": 1,
+    "description": "CampusConnect brings everyday student services into one place: personal timetables, announcements from departments, and room booking for study groups.\n\n## What you will learn\n- Designing a REST API and a React front end that talk to each other\n- Role-based access for students, lecturers and staff\n- Database modelling in PostgreSQL and writing safe migrations",
+    "lead": "Marcus Lee",
+    "roadmap": [
+      {
+        "title": "Requirements & user stories",
+        "done": true
+      },
+      {
+        "title": "Authentication & roles",
+        "done": true
+      },
+      {
+        "title": "Timetable and announcements",
+        "done": true
+      },
+      {
+        "title": "Room booking",
+        "done": false
+      },
+      {
+        "title": "Accessibility audit & release",
+        "done": false
+      }
+    ],
+    "github_repo": null,
+    "demo_url": null
+  },
+  {
+    "slug": "pipelinekit",
+    "title": "PipelineKit",
+    "tag": "DevOps",
+    "icon": "bi-diagram-3-fill",
+    "blurb": "Reusable CI/CD templates so every lab project builds, tests and deploys the same way.",
+    "stack": [
+      "GitHub Actions",
+      "Docker",
+      "Terraform"
+    ],
+    "progress": 55,
+    "milestone": "Sprint 5 of 9",
+    "status": "In development",
+    "art": "a2",
+    "sort_order": 2,
+    "description": "PipelineKit is a library of ready-made CI/CD workflows so every lab project builds, tests and deploys the same way.\n\n## Goals\n- One-line adoption: copy a workflow and go\n- Dependency caching and test sharding built in\n- Security scans on every pull request",
+    "lead": "Priya Nair",
+    "roadmap": [
+      {
+        "title": "Baseline pipeline template",
+        "done": true
+      },
+      {
+        "title": "Caching & test sharding",
+        "done": true
+      },
+      {
+        "title": "Docker build & publish",
+        "done": false
+      },
+      {
+        "title": "Security scanning",
+        "done": false
+      },
+      {
+        "title": "Documentation site",
+        "done": false
+      }
+    ],
+    "github_repo": null,
+    "demo_url": null
+  },
+  {
+    "slug": "healthtrack-api",
+    "title": "HealthTrack API",
+    "tag": "Backend",
+    "icon": "bi-hdd-network-fill",
+    "blurb": "A documented REST API with OpenAPI specs, auth and 90%+ automated test coverage.",
+    "stack": [
+      "Python",
+      "FastAPI",
+      "Redis"
+    ],
+    "progress": 92,
+    "milestone": "Release candidate",
+    "status": "Release candidate",
+    "art": "a3",
+    "sort_order": 3,
+    "description": "HealthTrack API is a documented REST API built test-first. It is our reference project for API design, validation and automated testing.\n\n## Highlights\n- OpenAPI specification generated from code\n- 90%+ test coverage on business logic\n- Token authentication and rate limiting",
+    "lead": "Marcus Lee",
+    "roadmap": [
+      {
+        "title": "Data model & endpoints",
+        "done": true
+      },
+      {
+        "title": "Authentication",
+        "done": true
+      },
+      {
+        "title": "OpenAPI documentation",
+        "done": true
+      },
+      {
+        "title": "Load testing",
+        "done": true
+      },
+      {
+        "title": "Release candidate sign-off",
+        "done": false
+      }
+    ],
+    "github_repo": null,
+    "demo_url": null
+  },
+  {
+    "slug": "reviewbot",
+    "title": "ReviewBot",
+    "tag": "Automation",
+    "icon": "bi-robot",
+    "blurb": "A GitHub app that lints pull requests and checks them against our review checklist.",
+    "stack": [
+      "TypeScript",
+      "Probot",
+      "Jest"
+    ],
+    "progress": 41,
+    "milestone": "Sprint 4 of 9",
+    "status": "In development",
+    "art": "a4",
+    "sort_order": 4,
+    "description": "ReviewBot is a GitHub app that checks every pull request against the lab's review checklist and leaves friendly, specific comments.\n\n## Planned checks\n- Missing tests or description\n- Very large diffs\n- Secrets accidentally committed",
+    "lead": "Aria Chen",
+    "roadmap": [
+      {
+        "title": "GitHub app scaffold",
+        "done": true
+      },
+      {
+        "title": "Pull request webhook",
+        "done": true
+      },
+      {
+        "title": "Checklist rules engine",
+        "done": false
+      },
+      {
+        "title": "Comment formatting",
+        "done": false
+      },
+      {
+        "title": "Pilot on lab repositories",
+        "done": false
+      }
+    ],
+    "github_repo": null,
+    "demo_url": null
+  },
+  {
+    "slug": "edumetrics",
+    "title": "EduMetrics Dashboard",
+    "tag": "Data",
+    "icon": "bi-bar-chart-line-fill",
+    "blurb": "Interactive analytics that help lecturers see which topics learners find hardest.",
+    "stack": [
+      "D3",
+      "Python",
+      "SQLite"
+    ],
+    "progress": 66,
+    "milestone": "Sprint 6 of 9",
+    "status": "Beta",
+    "art": "a5",
+    "sort_order": 5,
+    "description": "EduMetrics turns anonymised quiz and assignment data into interactive charts that help lecturers see which topics learners find hardest.\n\n## Focus areas\n- Data cleaning and privacy by design\n- Interactive visualisation with D3\n- Clear, accessible dashboards",
+    "lead": "Daniel Osei",
+    "roadmap": [
+      {
+        "title": "Data import & anonymisation",
+        "done": true
+      },
+      {
+        "title": "Core charts",
+        "done": true
+      },
+      {
+        "title": "Filters and drill-down",
+        "done": true
+      },
+      {
+        "title": "Accessibility review",
+        "done": false
+      },
+      {
+        "title": "Pilot with two courses",
+        "done": false
+      }
+    ],
+    "github_repo": null,
+    "demo_url": null
+  },
+  {
+    "slug": "openkit-ui",
+    "title": "OpenKit UI",
+    "tag": "Open Source",
+    "icon": "bi-grid-1x2-fill",
+    "blurb": "An accessible, well-tested React component library maintained by the whole collective.",
+    "stack": [
+      "React",
+      "Storybook",
+      "Vitest"
+    ],
+    "progress": 34,
+    "milestone": "Sprint 3 of 9",
+    "status": "In development",
+    "art": "a6",
+    "sort_order": 6,
+    "description": "OpenKit UI is an accessible React component library maintained by the whole collective, with a documented design system and Storybook.\n\n## Principles\n- Keyboard and screen-reader friendly by default\n- Every component has tests and stories\n- Semantic versioning and a public changelog",
+    "lead": "Daniel Osei",
+    "roadmap": [
+      {
+        "title": "Design tokens & theming",
+        "done": true
+      },
+      {
+        "title": "Buttons, inputs, forms",
+        "done": false
+      },
+      {
+        "title": "Dialogs & menus",
+        "done": false
+      },
+      {
+        "title": "Docs site",
+        "done": false
+      },
+      {
+        "title": "Version 1.0 release",
+        "done": false
+      }
+    ],
+    "github_repo": null,
+    "demo_url": null
+  }
+]

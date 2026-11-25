@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Intro to Git & Pull Requests Workshop",
+    "type": "Workshop",
+    "description": "A hands-on session for newcomers: branching, commits, pull requests and your first code review. Bring a laptop.",
+    "location": "Software Engineering Lab, Room 204",
+    "offset_days": 9,
+    "hour": 15,
+    "duration_h": 2,
+    "capacity": 40,
+    "icon": "bi-git",
+    "art": "a1"
+  },
+  {
+    "title": "Hack Night: Fix a Good First Issue",
+    "type": "Hack Night",
+    "description": "Pair up with a mentor and fix a labelled good-first-issue in one of our open-source projects. Pizza provided.",
+    "location": "Software Engineering Lab, Room 204",
+    "offset_days": 16,
+    "hour": 18,
+    "duration_h": 3,
+    "capacity": 30,
+    "icon": "bi-lightning-charge-fill",
+    "art": "a4"
+  },
+  {
+    "title": "Winter Demo Day",
+    "type": "Demo Day",
+    "description": "Every team demos working software to students, mentors and industry guests. Open to everyone.",
+    "location": "Main Auditorium",
+    "offset_days": 30,
+    "hour": 14,
+    "duration_h": 3,
+    "capacity": 120,
+    "icon": "bi-rocket-takeoff-fill",
+    "art": "a3"
+  },
+  {
+    "title": "Sprint Retrospective Open House",
+    "type": "Meetup",
+    "description": "See how we run retrospectives and what we changed after last sprint. Observers welcome.",
+    "location": "Online (link sent after registration)",
+    "offset_days": -14,
+    "hour": 17,
+    "duration_h": 1,
+    "capacity": 0,
+    "icon": "bi-chat-square-text-fill",
+    "art": "a5"
+  }
+]

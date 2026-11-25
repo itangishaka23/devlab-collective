@@ -1,0 +1,98 @@
+[
+  {
+    "category": "joining",
+    "question": "Who can join the DevLab Collective?",
+    "answer": "Any student or recent graduate with basic programming experience can apply. You do not need to be an expert — curiosity, reliability and a willingness to receive code review matter most.",
+    "sort_order": 1
+  },
+  {
+    "category": "joining",
+    "question": "How do I apply?",
+    "answer": "Use the contact form on the home page and choose “Join the Lab” as the subject. We open intake at the start of each semester and invite applicants to a short technical conversation and a small pairing exercise.",
+    "sort_order": 2
+  },
+  {
+    "category": "joining",
+    "question": "What is the weekly time commitment?",
+    "answer": "Plan for about 6–8 hours a week: a planning or review session, a stand-up rhythm, and focused build time. Exam periods are planned around in advance.",
+    "sort_order": 3
+  },
+  {
+    "category": "joining",
+    "question": "Can I join remotely?",
+    "answer": "Yes. Our workflow is built around Git, pull requests and async updates, so hybrid and remote members contribute fully. Demos and retrospectives run on video as well as in person.",
+    "sort_order": 4
+  },
+  {
+    "category": "projects",
+    "question": "How are projects chosen?",
+    "answer": "Projects come from campus needs, community partners and open-source gaps. The mentors team scores each proposal on learning value, scope and user impact before it enters the roadmap.",
+    "sort_order": 5
+  },
+  {
+    "category": "projects",
+    "question": "Can I propose my own project?",
+    "answer": "Absolutely. Submit a one-page proposal with the problem, target users and a rough tech stack. If approved, you become the product owner for the first sprint.",
+    "sort_order": 6
+  },
+  {
+    "category": "projects",
+    "question": "How do sprints work?",
+    "answer": "Every sprint lasts two weeks: planning on day one, daily asynchronous stand-ups, a demo to stakeholders and a retrospective at the end. Velocity and bug counts are tracked on the project board.",
+    "sort_order": 7
+  },
+  {
+    "category": "projects",
+    "question": "Who owns the code we write?",
+    "answer": "Lab projects are released under open-source licences chosen per project (usually MIT). Contributors keep credit for their commits and may reference the work in their portfolios.",
+    "sort_order": 8
+  },
+  {
+    "category": "tools",
+    "question": "Which languages and frameworks do you use?",
+    "answer": "Mostly JavaScript/TypeScript (React, Node.js), Python (FastAPI) and SQL. We pick the right tool per project rather than forcing one stack, and mentors help you ramp up.",
+    "sort_order": 9
+  },
+  {
+    "category": "tools",
+    "question": "What does the CI/CD pipeline look like?",
+    "answer": "Every pull request triggers linting, unit tests and a preview build. Merges to main run the full test suite, build container images and deploy to staging, with production releases gated by a reviewer.",
+    "sort_order": 10
+  },
+  {
+    "category": "tools",
+    "question": "What are the testing expectations?",
+    "answer": "New features ship with tests. We aim for at least 80% coverage on business logic and require passing checks before a pull request can be merged.",
+    "sort_order": 11
+  },
+  {
+    "category": "careers",
+    "question": "Will the lab help with internships and jobs?",
+    "answer": "Yes. Mentors from industry run mock interviews, review portfolios and share openings. Many members land internships after one or two semesters of lab work.",
+    "sort_order": 12
+  },
+  {
+    "category": "careers",
+    "question": "Do I get a certificate?",
+    "answer": "Members who complete at least two sprints and one release receive a lab completion certificate and a written reference describing their contribution.",
+    "sort_order": 13
+  },
+  {
+    "category": "general",
+    "question": "Is the lab free?",
+    "answer": "Yes — membership is free. Hosting and tooling costs are covered by sponsors and university support.",
+    "sort_order": 14
+  },
+  {
+    "category": "general",
+    "question": "How do I report a security issue in a lab project?",
+    "answer": "Please email the lab address with “Security” in the subject and include steps to reproduce. We acknowledge reports promptly and credit responsible disclosure in our release notes.",
+    "sort_order": 15
+  },
+  {
+    "category": "general",
+    "question": "How can industry partners get involved?",
+    "answer": "Reach out through the contact form. Partners can sponsor projects, mentor teams, offer real-world problem statements or host demo days.",
+    "sort_order": 16
+  }
+]

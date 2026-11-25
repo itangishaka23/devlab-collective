@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /account
+
+# Replace with your real domain. The API also serves a live sitemap at <API_URL>/sitemap.xml
+Sitemap: https://YOUR-DOMAIN.example/sitemap.xml

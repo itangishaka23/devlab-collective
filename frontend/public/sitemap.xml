@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Static fallback. Replace YOUR-DOMAIN.example, or serve the live one from the API: <API_URL>/sitemap.xml -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://YOUR-DOMAIN.example/</loc></url>
+  <url><loc>https://YOUR-DOMAIN.example/events</loc></url>
+  <url><loc>https://YOUR-DOMAIN.example/blog</loc></url>
+  <url><loc>https://YOUR-DOMAIN.example/gallery</loc></url>
+  <url><loc>https://YOUR-DOMAIN.example/faq</loc></url>
+  <url><loc>https://YOUR-DOMAIN.example/reports</loc></url>
+  <url><loc>https://YOUR-DOMAIN.example/join</loc></url>
+</urlset>

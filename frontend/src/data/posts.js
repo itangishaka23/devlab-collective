@@ -1,0 +1,127 @@
+// Block types: p, h3, quote, list (items: [{b, t}]), stats (items: [{val,label}]), code
+export const POST_CATEGORIES = ['All Posts', 'Engineering', 'DevOps', 'Testing', 'Open Source', 'Career', 'Lab News'];
+
+export const POSTS = [
+  {
+    slug: 'cutting-ci-time-from-18-to-4-minutes',
+    title: 'Cutting our CI time from 18 minutes to 4',
+    excerpt: 'How dependency caching, test sharding and a leaner Docker image made every pull request feel instant — with the numbers behind each change.',
+    category: 'DevOps', icon: 'bi-speedometer2', art: 'a2', date: 'Oct 28, 2026', read: '6 min read',
+    author: { name: 'Priya Nair', role: 'QA & DevOps Lead', a: '#0f4c9e', b: '#1fa88c', bio: 'Priya leads DevOps and QA at the lab and maintains PipelineKit, the lab’s CI/CD template library.' },
+    tags: ['DevOps', 'CI/CD', 'Performance'],
+    body: [
+      { type: 'p', text: 'In September, the median pull request in our lab waited 18 minutes for CI. Members had stopped waiting: they switched tasks, lost context and merged late. We decided to treat pipeline speed as a product problem.' },
+      { type: 'p', text: 'Six weeks later the median is just under four minutes. None of the changes were exotic — they were measured, reviewed and shipped one pull request at a time.' },
+      { type: 'h3', text: 'Step one: measure before touching anything' },
+      { type: 'p', text: 'We exported timings for every job across 300 recent runs. Installing dependencies and running the slowest test suite accounted for more than 70% of the wall-clock time.' },
+      { type: 'quote', text: 'If you cannot point at the slowest step with a number, you are guessing — and guessing is how pipelines get slower.' },
+      { type: 'stats', items: [{ val: '18 → 4', label: 'Median minutes per run' }, { val: '3×', label: 'Parallel test shards' }, { val: '62%', label: 'Cache hit rate' }] },
+      { type: 'h3', text: 'Step two: cache, shard, slim down' },
+      { type: 'p', text: 'We cached the package manager store keyed on the lockfile, split the end-to-end suite into three shards, and moved to a multi-stage Docker build so only changed layers rebuild.' },
+      { type: 'code', text: "- uses: actions/cache@v4\n  with:\n    path: ~/.npm\n    key: npm-${{ hashFiles('package-lock.json') }}\n\n- run: npm test -- --shard=${{ matrix.shard }}/3" },
+      { type: 'h3', text: 'What we would repeat' },
+      { type: 'list', items: [
+        { b: 'Profile first', t: ' — export timings and sort by cost.' },
+        { b: 'Keep caches honest', t: ' — key them on lockfiles so stale caches never hide bugs.' },
+        { b: 'Review pipeline changes', t: ' — a CI change is production code and gets the same scrutiny.' },
+        { b: 'Publish the numbers', t: ' — a dashboard keeps everyone invested.' },
+      ] },
+      { type: 'p', text: 'The templates are open source inside PipelineKit if you want to reuse them in your own projects.' },
+    ],
+  },
+  {
+    slug: 'writing-tests-first-lessons-from-healthtrack',
+    title: 'Writing tests first: lessons from HealthTrack API',
+    excerpt: 'What happened when a team of beginners committed to test-driven development for an entire release cycle.',
+    category: 'Testing', icon: 'bi-bug-fill', art: 'a3', date: 'Oct 21, 2026', read: '5 min read',
+    author: { name: 'Marcus Lee', role: 'Tech Lead', a: '#1fa88c', b: '#0f8a73', bio: 'Marcus is the lab’s tech lead and coaches teams on API design and testing.' },
+    tags: ['Testing', 'TDD', 'Python'],
+    body: [
+      { type: 'p', text: 'The HealthTrack team agreed on one rule for the release cycle: no production code without a failing test first. The first two weeks were slow and frustrating.' },
+      { type: 'p', text: 'By week four, the team was debugging less and refactoring more. Coverage climbed to 91% and the number of bugs reported after demos dropped to almost zero.' },
+      { type: 'h3', text: 'What changed' },
+      { type: 'list', items: [
+        { b: 'Smaller pull requests', t: ' — a test naturally limits scope.' },
+        { b: 'Clearer reviews', t: ' — reviewers read tests first to learn the intent.' },
+        { b: 'Fearless refactoring', t: ' — green tests meant safe changes.' },
+      ] },
+      { type: 'quote', text: 'The tests became our documentation, and the documentation never lied.' },
+      { type: 'p', text: 'We still write exploratory code occasionally, but we throw it away and re-implement it test-first. It keeps the habit honest.' },
+    ],
+  },
+  {
+    slug: 'our-first-open-source-release-openkit-ui',
+    title: 'Our first open-source release: OpenKit UI 0.3',
+    excerpt: 'Licences, changelogs, semantic versioning and the first outside contributor — a release diary.',
+    category: 'Open Source', icon: 'bi-github', art: 'a6', date: 'Oct 12, 2026', read: '4 min read',
+    author: { name: 'Daniel Osei', role: 'UX Engineer', a: '#0a1f44', b: '#1b6fd1', bio: 'Daniel designs and builds accessible interfaces and leads the OpenKit UI team.' },
+    tags: ['Open Source', 'React', 'Accessibility'],
+    body: [
+      { type: 'p', text: 'Publishing a package taught us that code is only half a release. The rest is a licence, a readme, a changelog, a contribution guide and a promise about versioning.' },
+      { type: 'h3', text: 'The release checklist' },
+      { type: 'list', items: [
+        { b: 'Licence', t: ' — MIT, added before the first public commit.' },
+        { b: 'Accessibility audit', t: ' — keyboard and screen-reader checks on every component.' },
+        { b: 'Semantic versioning', t: ' — breaking changes only in major versions.' },
+        { b: 'Good first issues', t: ' — labelled tasks for newcomers.' },
+      ] },
+      { type: 'p', text: 'Within a week, an outside contributor fixed a focus-ring bug. Reviewing a stranger’s pull request was a lesson in kind, precise feedback.' },
+    ],
+  },
+  {
+    slug: 'code-review-checklist-for-beginners',
+    title: 'A code review checklist for beginners',
+    excerpt: 'Reviewing code is a skill. Here is the one-page checklist every new lab member gets in week one.',
+    category: 'Engineering', icon: 'bi-eye-fill', art: 'a1', date: 'Oct 5, 2026', read: '5 min read',
+    author: { name: 'Aria Chen', role: 'Lab Director', a: '#1b6fd1', b: '#0f4c9e', bio: 'Aria directs the lab and teaches the software engineering practice course.' },
+    tags: ['Engineering', 'Code Review'],
+    body: [
+      { type: 'p', text: 'Many beginners think review means finding mistakes. It is really about sharing context and keeping the codebase understandable.' },
+      { type: 'h3', text: 'Our one-page checklist' },
+      { type: 'list', items: [
+        { b: 'Does it do what the story says?', t: ' Read the description and acceptance criteria first.' },
+        { b: 'Is it tested?', t: ' Look for new or updated tests covering behaviour.' },
+        { b: 'Is it readable?', t: ' Names, small functions, and comments that explain why.' },
+        { b: 'Is it safe?', t: ' Input validation, secrets and permissions.' },
+        { b: 'Is the tone kind?', t: ' Ask questions, suggest alternatives, praise good work.' },
+      ] },
+      { type: 'quote', text: 'Review the code, not the person — and always leave one thing you liked.' },
+    ],
+  },
+  {
+    slug: 'from-lab-to-first-job',
+    title: 'From the lab to a first job: what alumni wish they knew',
+    excerpt: 'Five alumni share how lab habits translated into their first engineering roles.',
+    category: 'Career', icon: 'bi-briefcase-fill', art: 'a5', date: 'Sep 24, 2026', read: '6 min read',
+    author: { name: 'Aria Chen', role: 'Lab Director', a: '#1b6fd1', b: '#0f4c9e', bio: 'Aria directs the lab and teaches the software engineering practice course.' },
+    tags: ['Career', 'Alumni'],
+    body: [
+      { type: 'p', text: 'We asked five alumni what surprised them most in their first jobs. Their answers had little to do with syntax.' },
+      { type: 'list', items: [
+        { b: 'Communication beats cleverness', t: ' — clear pull request descriptions win trust.' },
+        { b: 'Estimate honestly', t: ' — sprint planning in the lab prepared them for it.' },
+        { b: 'Ask early', t: ' — stuck for more than an hour? Pair up.' },
+      ] },
+      { type: 'p', text: 'Their shared advice: keep a portfolio of merged pull requests, not just personal projects.' },
+    ],
+  },
+  {
+    slug: 'autumn-sprint-demo-day',
+    title: 'Autumn demo day: six teams, six live demos',
+    excerpt: 'A recap of the demo day where every project team showed working software to industry guests.',
+    category: 'Lab News', icon: 'bi-megaphone-fill', art: 'a4', date: 'Sep 15, 2026', read: '3 min read',
+    author: { name: 'Marcus Lee', role: 'Tech Lead', a: '#1fa88c', b: '#0f8a73', bio: 'Marcus is the lab’s tech lead and coaches teams on API design and testing.' },
+    tags: ['Lab News', 'Demo Day'],
+    body: [
+      { type: 'p', text: 'Six teams presented working software to students, mentors and industry guests. Every demo ran from the deployed staging environment — no slides pretending to be software.' },
+      { type: 'list', items: [
+        { b: 'CampusConnect', t: ' showed live room booking.' },
+        { b: 'HealthTrack API', t: ' demonstrated its OpenAPI explorer.' },
+        { b: 'ReviewBot', t: ' commented on a pull request in real time.' },
+      ] },
+      { type: 'p', text: 'Thank you to everyone who attended. The next demo day is at the end of the spring sprint.' },
+    ],
+  },
+];
+
+export const getPost = (slug) => POSTS.find((p) => p.slug === slug);

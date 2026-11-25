@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Aria Chen",
+    "role": "Lab Director",
+    "color_a": "#1b6fd1",
+    "color_b": "#0f4c9e",
+    "sort_order": 1
+  },
+  {
+    "name": "Marcus Lee",
+    "role": "Tech Lead",
+    "color_a": "#1fa88c",
+    "color_b": "#0f8a73",
+    "sort_order": 2
+  },
+  {
+    "name": "Priya Nair",
+    "role": "QA & DevOps Lead",
+    "color_a": "#0f4c9e",
+    "color_b": "#1fa88c",
+    "sort_order": 3
+  },
+  {
+    "name": "Daniel Osei",
+    "role": "UX Engineer",
+    "color_a": "#0a1f44",
+    "color_b": "#1b6fd1",
+    "sort_order": 4
+  }
+]

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevLab Collective — Software Engineering Lab</title>
+    <meta
+      name="description"
+      content="DevLab Collective is a software engineering lab where students and mentors design, build, test and ship real software together."
+    />
+    <meta name="theme-color" content="#0a1f44" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+
+    <!-- Default social-sharing tags (per-page tags are set at runtime by the Seo component).
+         NOTE: link-preview bots do not run JavaScript, so shared links show these defaults. -->
+    <meta property="og:site_name" content="DevLab Collective" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="DevLab Collective — Software Engineering Lab" />
+    <meta property="og:description" content="Design, build, test and ship real software together." />
+    <meta property="og:image" content="/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Apply the saved theme before first paint to avoid a light/dark flash -->
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('devlab_theme');
+          if (t !== 'light' && t !== 'dark') {
+            t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+          }
+          document.documentElement.setAttribute('data-theme', t);
+          document.documentElement.setAttribute('data-bs-theme', t);
+        } catch (e) {}
+      })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Nunito+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

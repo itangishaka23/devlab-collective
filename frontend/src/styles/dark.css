@@ -1,0 +1,93 @@
+/* ==========================================================================
+   Dark theme — activated by <html data-theme="dark"> (also sets data-bs-theme
+   so Bootstrap's own components follow). Loaded after style.css / app.css.
+   ========================================================================== */
+[data-theme="dark"] {
+  --clr-bg: #0b1426;
+  --clr-surface: #111d33;
+  --clr-text: #e6edf7;
+  --clr-text-muted: #9fb0c6;
+  --clr-primary-light: rgba(27, 111, 209, 0.2);
+  --clr-secondary-light: rgba(31, 168, 140, 0.2);
+  --shadow-soft: 0 10px 30px -10px rgba(0, 0, 0, 0.55);
+  color-scheme: dark;
+}
+
+/* Bootstrap's utility keeps sections white — follow the theme instead */
+[data-theme="dark"] .bg-white { background-color: #0e182c !important; }
+
+/* Brand logo (white lettering variant) */
+[data-theme="dark"] .brand-light { display: none; }
+[data-theme="dark"] .brand-dark { display: block; }
+
+/* Navigation */
+[data-theme="dark"] .navbar-hw.scrolled { background: rgba(11, 20, 38, 0.88); }
+[data-theme="dark"] .navbar-toggler { color: var(--clr-text); }
+[data-theme="dark"] .navbar-collapse.show { background: transparent; }
+[data-theme="dark"] .theme-toggle { color: #ffd68a; border-color: rgba(255, 255, 255, 0.2); }
+[data-theme="dark"] .theme-toggle:hover { background: rgba(255, 255, 255, 0.1); }
+[data-theme="dark"] .nav-chip { border-color: rgba(255, 255, 255, 0.2); color: var(--clr-text); }
+[data-theme="dark"] .nav-chip:hover { background: rgba(255, 255, 255, 0.1); color: #fff; }
+
+/* Hero backgrounds */
+[data-theme="dark"] .hero,
+[data-theme="dark"] .policy-hero,
+[data-theme="dark"] .auth-page { background: radial-gradient(circle at 18% 20%, #12284f 0, var(--clr-bg) 55%); }
+[data-theme="dark"] .blog-hero,
+[data-theme="dark"] .post-hero { background: var(--clr-bg); }
+
+/* Surfaces that were hard-coded white */
+[data-theme="dark"] .btn-hw-outline,
+[data-theme="dark"] .about-badge,
+[data-theme="dark"] .about-badge .ab-ring::before,
+[data-theme="dark"] .hiw-num,
+[data-theme="dark"] .blog-filter button,
+[data-theme="dark"] .featured-post,
+[data-theme="dark"] .pagination-hw a,
+[data-theme="dark"] .post-stat-band,
+[data-theme="dark"] .author-card,
+[data-theme="dark"] .blog-card,
+[data-theme="dark"] .post-share a,
+[data-theme="dark"] #scrollTop,
+[data-theme="dark"] .mobile-donate-bar { background: var(--clr-surface); }
+[data-theme="dark"] .float-card { background: rgba(17, 29, 51, 0.88); }
+[data-theme="dark"] .map-placeholder { background: linear-gradient(135deg, #12284f, #0f3a3a); }
+[data-theme="dark"] .panel-git,
+[data-theme="dark"] .panel-review { background: var(--clr-surface); }
+
+/* Headings & text that were hard-coded navy */
+[data-theme="dark"] .blog-filter button,
+[data-theme="dark"] .featured-post .fp-link,
+[data-theme="dark"] .featured-post h2,
+[data-theme="dark"] .pagination-hw a,
+[data-theme="dark"] .post-meta .author .name,
+[data-theme="dark"] .post-title,
+[data-theme="dark"] .post-body h3,
+[data-theme="dark"] .post-body strong,
+[data-theme="dark"] .post-pullquote,
+[data-theme="dark"] .post-tags a,
+[data-theme="dark"] .post-share a,
+[data-theme="dark"] .blog-card h5,
+[data-theme="dark"] .pr-head { color: var(--clr-text); }
+[data-theme="dark"] .btn-hw-outline { color: #cfe3ff; border-color: rgba(255, 255, 255, 0.22); }
+[data-theme="dark"] .blog-filter button.active,
+[data-theme="dark"] .pagination-hw a.active { color: #fff; }
+[data-theme="dark"] .post-tags a { background: rgba(27, 111, 209, 0.18); }
+[data-theme="dark"] .cause-details,
+[data-theme="dark"] .event-type,
+[data-theme="dark"] .tech-chip { color: #8fc2ff; }
+[data-theme="dark"] .pg-title { color: #8fc2ff; }
+
+/* Inputs & misc */
+[data-theme="dark"] .form-control-hw,
+[data-theme="dark"] .form-select.form-control-hw { background-color: #0e182c; color: var(--clr-text); border-color: rgba(255, 255, 255, 0.14); }
+[data-theme="dark"] .form-control-hw::placeholder { color: #6f829c; }
+[data-theme="dark"] .modal-content { background: var(--clr-surface); }
+[data-theme="dark"] .modal.show { background: rgba(0, 0, 0, 0.55); }
+[data-theme="dark"] .event-badge.full { background: rgba(239, 68, 68, 0.2); color: #fca5a5; }
+[data-theme="dark"] .event-badge.ok { color: #6ee7d0; }
+[data-theme="dark"] .rm-dot { background: var(--clr-surface); }
+[data-theme="dark"] .gh-head a { color: var(--clr-text); }
+[data-theme="dark"] .markdown a { color: #8fc2ff; }
+[data-theme="dark"] .hero-lead,
+[data-theme="dark"] .section-sub { color: var(--clr-text-muted); }

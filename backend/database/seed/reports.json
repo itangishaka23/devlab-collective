@@ -1,0 +1,32 @@
+[
+  {
+    "title": "2026 Lab Annual Report",
+    "subtitle": "Releases, metrics and lessons learned across all teams",
+    "year": 2026
+  },
+  {
+    "title": "Engineering Handbook v3",
+    "subtitle": "Branching model, review checklist, definition of done",
+    "year": 2026
+  },
+  {
+    "title": "Q3 2026 Sprint Review Pack",
+    "subtitle": "Demo notes, velocity charts and retrospective actions",
+    "year": 2026
+  },
+  {
+    "title": "Security & Dependency Audit 2026",
+    "subtitle": "Vulnerability scan summary and remediation log",
+    "year": 2026
+  },
+  {
+    "title": "2025 Lab Annual Report",
+    "subtitle": "Releases, metrics and lessons learned across all teams",
+    "year": 2025
+  },
+  {
+    "title": "Research Note: Reducing CI Time with Caching",
+    "subtitle": "Experiment design and results from PipelineKit",
+    "year": 2026
+  }
+]
